@@ -5,7 +5,7 @@ const characters = require('./data.json')
 
 
 app.get('/', (req, res) =>{
-  res.send('🤖')
+  res.send('🤖👽')
 })
 
 app.get('/characters', (req, res) => {
