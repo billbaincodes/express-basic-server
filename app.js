@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-let port = 3000
+let port = process.env.PORT || 3000
 const bodyParser = require('body-parser')
 const charactersRoutes = require('./routes/characters')
 
