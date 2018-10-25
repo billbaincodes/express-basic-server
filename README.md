@@ -77,3 +77,7 @@
 * [Heroku Docs - Heroku Logs](https://devcenter.heroku.com/articles/getting-started-with-nodejs#view-logs)
 
 ## Notes
+
+  -Make sure start script is correct in package.kson
+  -Make sure POST is being set dynamically with environment variable
+    -process.env.PORT

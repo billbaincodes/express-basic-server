@@ -1,5 +1,6 @@
 const express = require('express')
 const app = express()
+const cors = require('cors')
 let port = process.env.PORT || 3000
 const bodyParser = require('body-parser')
 const charactersRoutes = require('./routes/characters')
@@ -8,6 +9,7 @@ const charactersRoutes = require('./routes/characters')
 //General middleware 
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
+app.use(cors())
 
 
 //basic get route
