@@ -78,6 +78,8 @@
 
 ## Notes
 
-  -Make sure start script is correct in package.kson
+  -Make sure start script is correct in package.json
   -Make sure POST is being set dynamically with environment variable
     -process.env.PORT
+  -Bring in cors and enable it as middleware
+  -Try deploying the collective API and linking it to the react inbox
