@@ -61,3 +61,19 @@
 ## Resources
 
 * [Express Docs - Router](https://expressjs.com/en/4x/api.html#router)
+
+
+# Basic Express Server: Deploy to Heroku
+
+## Objectives
+
+* Deploy an express server to Heroku
+* Use Heroku logs to debug deployment issues
+* Configure server code to use environment variables
+
+## Resources
+
+* [Heroku Docs - Deploy Node.js App Tutorial](https://devcenter.heroku.com/articles/getting-started-with-nodejs)
+* [Heroku Docs - Heroku Logs](https://devcenter.heroku.com/articles/getting-started-with-nodejs#view-logs)
+
+## Notes

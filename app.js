@@ -23,5 +23,24 @@ app.use((req, res, next) => {
   res.status(404).json({ error: { message: 'What\'d you do?!' }, status: 404})
 })
 
+// eslint-disable-next-line
+function errorHandler(err, req, res, next) {
+  console.error('ERROR', err)
+
+  const stack = process.env.NODE_ENV !== 'production' ? err.stack : undefined
+
+  // if (process.env.NODE_ENV !== 'production') {
+  //   stack = err.stack
+  // } else {
+  //   stack = undefined
+  // }
+
+  res.status(500).send({
+    error: err.message,
+    stack,
+    url: req.originalUrl 
+  })
+}
+
 
 app.listen(port, () => console.log(`Server running on ${port}`))
