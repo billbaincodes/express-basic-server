@@ -43,7 +43,7 @@ router.put('/:id', (req, res) => {
     }
     return character
   })
-  res.json({characters: updatedCharacters})
+  res.json({characters: updatedCharacters })
 })
 
 
@@ -64,7 +64,7 @@ router.delete('/:id', (req, res) => {
 
 
 //basic post 
-router.post('/', (req, res, next) =>{
+router.post('/', (req, res, next) =>{ 
   //Pull data from the post body
   const body = req.body
   console.log(body)
