@@ -63,6 +63,7 @@
 * [Express Docs - Router](https://expressjs.com/en/4x/api.html#router)
 
 
+
 # Basic Express Server: Deploy to Heroku
 
 ## Objectives
@@ -83,3 +84,21 @@
     -process.env.PORT
   -Bring in cors and enable it as middleware
   -Try deploying the collective API and linking it to the react inbox
+
+
+
+# Basic Express Server: Knex Migrations & Seeds
+
+## Objectives
+
+* Add knex to a project
+* Setup connection to a local database
+* Create and run migration files
+* Create and run seed files
+
+## Resources
+
+* [Knex.js Docs](https://knexjs.org/)
+* [Knex.js Docs - Schema Builder](https://knexjs.org/#Schema)
+
+## Notes
