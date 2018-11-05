@@ -37,7 +37,7 @@ router.put('/:id', (req, res, next) => {
       !updatedCharacter.length ? 
       next() :
       res.json({ updatedCharacter : updatedCharacter[0] })
-  })
+    })
 })
 
 //basic delete route
@@ -51,7 +51,7 @@ router.delete('/:id', (req, res, next) => {
       !deletedCharacter.length ? 
       next() :
       res.json({ deletedCharacter : deletedCharacter[0] })
-  })
+    })
 })
 
 //basic post 
