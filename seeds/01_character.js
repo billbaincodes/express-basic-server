@@ -1,4 +1,3 @@
-
 exports.seed = function(knex, Promise) {
   // Deletes ALL existing entries
   return knex('character').del()
@@ -16,6 +15,6 @@ exports.seed = function(knex, Promise) {
           height: 167,
           mass: 75
         }
-      ]);
-    });
-};
+      ])
+    })
+}

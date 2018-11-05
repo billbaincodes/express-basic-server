@@ -5,38 +5,30 @@ let port = process.env.PORT || 3000
 const bodyParser = require('body-parser')
 const charactersRoutes = require('./routes/characters')
 
-
 //General middleware 
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(cors())
 
-
 //basic get route
 app.get('/', (req, res) =>{
-  res.send('🤖👽')
+  res.send('👽')
 })
 
 //any request that start with /characters send to this routing file
 app.use('/characters', charactersRoutes)
 
+//error handling
+app.use(notFound)
+app.use(errorHandler)
 
-app.use((req, res, next) => {
-  res.status(404).json({ error: { message: `What'd you do?!` }, status: 404})
-})
+function notFound(req, res, next) {
+  res.status(404).send({ error: 'Not found!', status: 404, url: req.originalUrl })
+}
 
-// eslint-disable-next-line
 function errorHandler(err, req, res, next) {
   console.error('ERROR', err)
-
   const stack = process.env.NODE_ENV !== 'production' ? err.stack : undefined
-
-  // if (process.env.NODE_ENV !== 'production') {
-  //   stack = err.stack
-  // } else {
-  //   stack = undefined
-  // }
-
   res.status(500).send({
     error: err.message,
     stack,
@@ -44,5 +36,5 @@ function errorHandler(err, req, res, next) {
   })
 }
 
-
+//listener
 app.listen(port, () => console.log(`Server running on ${port}`))
